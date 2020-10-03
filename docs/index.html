@@ -4,8 +4,6 @@
     <title>Design</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-    <script src="/static/html/components/component_modules/mocha/mocha.js" defer></script>
-    <link rel="stylesheet" href="/static/html/components/component_modules/mocha/mocha.css" media="print" onload="this.media='all'">
     <script src="/static/html/components/component_modules/eruda/eruda.js" defer></script>
     <meta property="og:site_name" content="design"/>
     <meta property="og:locale" content="ru_RU"/>
@@ -27,29 +25,7 @@
     </section>
 </body>
 <script type="module">
-    import tests from  '/static/html/components/component_modules/tests/tests.mjs'
-    // grecaptcha.ready(function() {
-    //
-    //     grecaptcha.execute('6LePTtIZAAAAANZeZsg3q5to7XxktI7XE4l9W5Fo', {action: 'homepage'})
-    //         .then(function(token) {
-    //
-    //     console.log('capcha',token)
-    //
-    //     });
-    //
-    // });
-    window.onload = () =>{
-        function views() {
-            let slot = document.createElement('slot')
-            slot.name="body"
-            document['body']['shadowRoot'].querySelector('img').remove()
-            document['body']['shadowRoot'].appendChild(slot)
-        }
-        setTimeout(views, 1000);
-    }
     eruda.init();
-    let setup =  mocha.setup('bdd')
-    tests()
 </script>
 <style>
     :root {
