@@ -63,6 +63,8 @@
     "yargs": "^16.0.3"
   },
   "nodemonConfig": {
-    "ignore": ["node_modules/*"]
+    "ignore": [
+      "node_modules/*"
+    ]
   }
 }

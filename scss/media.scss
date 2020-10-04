@@ -1,0 +1,54 @@
+@import "interface";
+@import "develope";
+@mixin media($type, $property1,$property2,$property3, $property4,$property5,$property6, $property7,$property8,$property9,$property10)
+{
+  @if ($type == dafault) {
+    @include develope('default')
+  }
+  @else if($type == body)
+  {
+    @include develope('default')
+  }
+}
+
+
+@mixin varan-media($type, $property1,$property2,$property3, $property4,$property5,$property6, $property7,$property8,$property9,$property10)
+{
+  @if ($type == varan-font-size)
+  {
+    $font-type: $property1;
+    $font-size: $property2;
+    $line-height: $property3;
+    $font-weight: $property4;
+    $font-color: $property5;
+    $text-align: $property6;
+    @include respond-to(phones)
+    {
+      font-size: $property1;
+    }
+    @include respond-to(wide-phones)
+    {
+      font-size: $property2;
+    }
+    @include respond-to(tablets)
+    {
+      font-size: $property3;
+    }
+    @include respond-to(small-desktops)
+    {
+      font-size: $property4;
+    }
+    @include respond-to(lg-desktops)
+    {
+      font-size: $property5;
+    }
+    @include respond-to(xlg-desktops)
+    {
+      font-size: $property6;
+    }
+    @include respond-to(max)
+    {
+      font-size: $property7;
+    }
+  }
+}
