@@ -27,8 +27,9 @@
     </section>
 </body>
 <script type="module">
-    import proximityAberration from '/dictionary/proximityAberration.json'
-    console.log(proximityAberration)
+    fetch('/dictionary/proximityAberration.json')
+        .then(response => response.json())
+        .then(obj => console.log(obj))
     eruda.init();
 </script>
 <style>
