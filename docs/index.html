@@ -20,26 +20,49 @@
         <fieldset>
             <legend>Gumilev</legend>
         </fieldset>
-        <fieldset>
+        <fieldset class="world-links">
             <legend>Links</legend>
-            <p><a href="http://json.parser.online.fr">JSON parser</a></p>
+            <page-external data-url="https://jsoneditoronline.org/" data-height=34></page-external>
         </fieldset>
         <fieldset class="world-external">
             <legend>External</legend>
-            <page-external data-url="http://gumilevica.kulichki.net/EVU/index.html" data-height=150></page-external>
+            <page-external data-url="https://zababurinsv.github.io/Michurin" data-height=87></page-external>
         </fieldset>
     </section>
 </body>
 <script type="module" src="/static/html/components/page-external/page-external.mjs" async></script>
 <script type="module">
+    import axios from '/static/html/components/component_modules/axios/axios.mjs'
     fetch('/dictionary/proximityAberration.json')
         .then(response => response.json())
         .then(obj => console.log(obj))
+
+    // console.log(axios['default'])
+    axios['default'].get('http://gumilevica.kulichki.net').then(resp => {
+
+        console.log(resp.data);
+    });
+    // axios('http://gumilevica.kulichki.net')
+    // fetch('http://gumilevica.kulichki.net/',{
+    //         mode: 'no-cors'
+    // })
+    // .then((response) =>{
+    //         console.log('##################', response)
+    // })
+    // .then((data) => {
+    //
+    //      console.log('data', document.body.querySelector('.world-external'))
+    //     })
     eruda.init();
 </script>
 <style>
     .world-external {
-        height: 150vw;
+        height: 87vw;
+    }
+    .world-links {
+        height: 34vw;
+        box-sizing: border-box;
+        padding-bottom: 2vw;
     }
 </style>
 </html>
