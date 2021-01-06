@@ -29,7 +29,7 @@ gulp.task('->static', function () {
         .pipe(autoprefixer({
             cascade: false
         }))
-        .pipe(gulp.dest('../static/html/components/'));
+        .pipe(gulp.dest('./static/html/components/'));
 });
 
 gulp.task('sass:watch', function () {
