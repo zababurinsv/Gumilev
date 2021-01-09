@@ -4,7 +4,7 @@ import Account from '/static/html/components/component_modules/account/account.m
 import walletTemplate from '/static/html/components/waves-provider/template/wallet.mjs'
 import Waves from '/static/html/components/component_modules/waves/index.mjs'
 import heap from '/static/html/components/component_modules/heap/heap.mjs'
-let waves = Waves()
+let waves =  new Waves()
 
 export default async (v,p,c,obj,r) =>{
     let objectWallet ={}
